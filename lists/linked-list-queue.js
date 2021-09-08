@@ -5,7 +5,7 @@
 
 import { LinkedListItem } from '../lib/linked-list-item.js';
 
-class LinkedListQueue {
+export class LinkedListQueue {
   constructor() {
     this.head = null;
     this.tail = null;
@@ -43,6 +43,7 @@ class LinkedListQueue {
     return currentTail.value;
   }
 
+  // O(n)
   get size() {
     let currentTail = this.tail;
     let length = 0;
@@ -53,6 +54,31 @@ class LinkedListQueue {
 
     return length;
   }
+
+  /**
+   * Search a position from tail (0 index) to head (length - 1 index)
+   * @param {} value 
+   * Return index if success find and -1 else.
+   */
+  search(value) {
+    let currentTail = this.tail;
+    let index = 0;
+    let isSuccessSearch = false;
+    while (currentTail !== null) {
+      isSuccessSearch = currentTail.value === value;
+      if (isSuccessSearch) {
+        break;
+      }
+      currentTail = currentTail.next;
+      index += 1;
+    }
+
+    if (!isSuccessSearch) {
+      return -1;
+    }
+
+    return index;
+  }
 }
 
 const linkedList = new LinkedListQueue();
@@ -60,10 +86,13 @@ linkedList.insertToHead('FirstInItem');
 linkedList.insertToHead('TheSecondInItem');
 linkedList.insertToHead('3rdInItem');
 console.log('Size of queue', linkedList.size);
-// linkedList.printAllItems();
+linkedList.printAllItems();
 
-// const indexSecondItem = linkedList.search('FirstInItem');
-// console.log('FirstInItem index is ', indexSecondItem);
+const indexSecondItem = linkedList.search('TheSecondInItem');
+console.log('TheSecondInItem index is ', indexSecondItem);
+
+const indexThirdItem = linkedList.search('3rdInItem');
+console.log('3rdInItem index is ', indexThirdItem);
 
 const firstInItem = linkedList.removeAndGetFirstInItem();
 console.log('First In Queue item', firstInItem, ', current queue size is ', linkedList.size);

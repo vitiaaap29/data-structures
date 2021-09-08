@@ -1,7 +1,5 @@
 {
-  "presets": [
-    "es2015"
-  ],
+  "presets": ["@babel/preset-env"],
   "sourceMaps": true,
   "retainLines": true
 }
