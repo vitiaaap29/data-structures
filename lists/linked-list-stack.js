@@ -5,7 +5,7 @@
 
 import { LinkedListItem } from '../lib/linked-list-item.js';
 
-class LinkedListStack {
+export class LinkedListStack {
   constructor() {
     this.head = null;
   }
