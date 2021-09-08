@@ -3,12 +3,7 @@
  * LIFO list.
  */
 
-class LinkedListItem {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
-  }
-}
+import { LinkedListItem } from '../lib/linked-list-item.js';
 
 class LinkedListStack {
   constructor() {
