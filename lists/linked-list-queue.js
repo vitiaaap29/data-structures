@@ -3,7 +3,6 @@
  * FIFO list.
  */
 
-import { LinkedListStack } from './linked-list-stack.js';
 import { LinkedListItem } from '../lib/linked-list-item.js';
 
 class LinkedListQueue {
