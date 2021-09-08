@@ -57,13 +57,31 @@ class LinkedListStack {
 
     return sizeCounter;
   }
+
+  // O(n)
+  search(value) {
+    let index = 0;
+    let currentHead = this.head;
+    while (currentHead) {
+      if (currentHead.value === value) {
+        break;
+      }
+      currentHead = currentHead.next;
+      index += 1;
+    }
+
+    return index;
+  }
 }
 
 const linkedList = new LinkedListStack();
-linkedList.insertToHead('FirstItem');
-linkedList.insertToHead('TheSecondItem');
-linkedList.insertToHead('3rdItem');
+linkedList.insertToHead('FirstInItem');
+linkedList.insertToHead('TheSecondInItem');
+linkedList.insertToHead('3rdInItem');
 linkedList.printAllItems();
+
+const indexSecondItem = linkedList.search('FirstInItem');
+console.log('FirstInItem index is ', indexSecondItem);
 
 const lastInItem = linkedList.removeFromHead();
 console.log('Last In Stack item', lastInItem, 'current stack size is ', linkedList.size);
