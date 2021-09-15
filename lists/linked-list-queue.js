@@ -43,6 +43,8 @@ export class LinkedListQueue {
     return currentTail.value;
   }
 
+  removeFromTail = this.removeAndGetFirstInItem;
+
   // O(n)
   get size() {
     let currentTail = this.tail;

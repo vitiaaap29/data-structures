@@ -15,4 +15,11 @@ describe('Linked list Queue', () => {
     expect(firstInItem).toBe(FIRST_IN_ITEM);
     expect(queue.size).toBe(0);
   });
+
+  test('removeFromTail', () => {
+    queue.insertToHead(FIRST_IN_ITEM);
+    const firstInItem = queue.removeFromTail();
+    expect(firstInItem).toBe(FIRST_IN_ITEM);
+    expect(queue.size).toBe(0);
+  });
 });

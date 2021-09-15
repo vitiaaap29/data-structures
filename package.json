@@ -6,6 +6,8 @@
   "scripts": {
     "test": "jest"
   },
+  "node": ">=12.9.0",
+  "npm": ">=6.0.0",
   "author": "punko.viktor@yandex.ru",
   "license": "ISC",
   "type": "module",
@@ -13,6 +15,7 @@
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.4",
     "@babel/register": "^7.15.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "jest": "^27.1.1"
   }
 }

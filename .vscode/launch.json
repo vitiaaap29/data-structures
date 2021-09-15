@@ -5,7 +5,8 @@
           "name": "Launch",
           "type": "node",
           "request": "launch",
-          "program": "${workspaceRoot}/lists/linked-list-queue.js",
+        //   "program": "${workspaceRoot}/lists/linked-list-queue.js",
+          "program": "${file}",
           "stopOnEntry": false,
           "args": [],
           "cwd": "${workspaceRoot}",
@@ -21,7 +22,8 @@
           },
           "console": "integratedTerminal",
           "sourceMaps": true,
-          "outFiles": []
+          "outFiles": [],
+          "runtimeVersion": "default",
       },
       {
           "name": "Attach",
